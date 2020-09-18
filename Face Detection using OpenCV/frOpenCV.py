@@ -1,7 +1,7 @@
 """This implementation is done by following the online tutorial
 https://machinelearningmastery.com/how-to-perform-face-detection-with-classical-and-deep-learning-methods-in-python-with-keras/
 
-Please download the haarcascade frontalface detection file from OpenCV GitHub ->
+Please download the haarcascade frontalface detection file from Face Detection using OpenCV GitHub ->
 https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml
  and save it in the working directory as ‘haarcascade_frontalface_default.xml‘.
 
@@ -15,8 +15,11 @@ import os
 from skimage.transform import resize
 from skimage import util
 import numpy as np
+working_dir = os.path.abspath(os.getcwd())
 
-test_images_folder= "test_images"
+general_dir = working_dir.rsplit("\\",1)[0]
+
+test_images_folder= os.path.join(general_dir,"test_images")
 
 def load_images_from_folder(test_images_folder):
     images=[]
@@ -36,7 +39,7 @@ def load_images_from_folder(test_images_folder):
     return images
 
 def face_detection(image):
-    # Load the pretrained model form OpenCV
+    # Load the pretrained model form Face Detection using OpenCV
     classifier = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
     # perform the face detection
     bboxes = classifier.detectMultiScale(image)
@@ -58,8 +61,9 @@ test_images = load_images_from_folder(test_images_folder)
 
 
 # Detect the faces from the images
-for image in test_images:
+for i,image in enumerate(test_images):
     image_detected = face_detection(image)
+    cv2.imwrite("image{}.jpg".format(i), image_detected)
     cv2.imshow("Face detected",image_detected)
 
     # keep the window open until we press a key

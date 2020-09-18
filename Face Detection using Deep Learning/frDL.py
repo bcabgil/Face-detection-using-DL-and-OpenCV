@@ -34,10 +34,10 @@ def load_images_from_folder(test_images_folder):
     return images
 
 # draw the detected faces on the squares
-def draw_image_with_boxes(data, result_list):
+def draw_image_with_boxes(data, result_list,i):
 
-    #plot the loaded image
-    plt.imshow(data)
+    # We add cv2.cvtColor to change the images from BGR as loaded with cv2 to RGB to be read by plt
+    plt.imshow( cv2.cvtColor(data, cv2.COLOR_BGR2RGB))
     #get the context for drawing boxes
     ax = plt.gca()
     #plot each box
@@ -54,20 +54,44 @@ def draw_image_with_boxes(data, result_list):
             dot = Circle(value, radius=2, color="red")
             ax.add_patch(dot)
     #show final plot
+    plt.axis("off")
+    plt.savefig("result{}".format(i))
     plt.show()
 
+#draw found faces subplot
+def draw_faces(data, result_list,j):
+    #iterate through the found faces
+    for i in range(len(result_list)):
+        #get coordinates
+        x1,y1, width, height = result_list[i]["box"]
+        x2, y2 = x1 + width, y1 + height
+        #define subplot
+        plt.subplot(1, len(result_list), i+1)
+        plt.axis("off")
+        #plot face
+        plt.imshow(cv2.cvtColor(data[y1:y2,x1:x2], cv2.COLOR_BGR2RGB))
+    plt.savefig("faces{}.jpg".format(j))
+    plt.show()
+    return
 
 
 # Load all images in test folder
-test_images_folder= "test_images"
+working_dir = os.path.abspath(os.getcwd())
+
+general_dir = working_dir.rsplit("\\",1)[0]
+
+test_images_folder= os.path.join(general_dir,"test_images")
+
 test_images = load_images_from_folder(test_images_folder)
 
 
 # Detect the faces from the images
-for image in test_images:
+for i,image in enumerate(test_images):
     detector = MTCNN()
     # detect the faces in the image
     faces = detector.detect_faces(image)
     # display faces on the original image
-    draw_image_with_boxes(image,faces)
+    draw_image_with_boxes(image,faces,i)
+    if faces:
+        draw_faces(image,faces,i)
 
