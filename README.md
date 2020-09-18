@@ -20,5 +20,23 @@ Content of the repository:
 
 Now some examples will be showed:
 
-OpenCV ![OpenCV](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20OpenCV/image0.jpg)	DL ![DL](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20Deep%20Learning/result0.png)
+*Open CV -- DeepLearning*
+-- 
+![](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20OpenCV/image0.jpg ) ![](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20Deep%20Learning/result0.png)
 
+*Open CV -- DeepLearning*
+- 
+![](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20OpenCV/image1.jpg ) ![](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20Deep%20Learning/result1.png)
+
+*Open CV -- DeepLearning*
+- 
+![](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20OpenCV/image2.jpg ) ![](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20Deep%20Learning/result2.png)
+
+*Open CV -- DeepLearning*
+- 
+
+![](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20OpenCV/image10.jpg ) ![](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20Deep%20Learning/result10.png)
+
+*Open CV -- DeepLearning*
+- 
+![](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20OpenCV/image13.jpg ) ![](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20Deep%20Learning/result13.png)
