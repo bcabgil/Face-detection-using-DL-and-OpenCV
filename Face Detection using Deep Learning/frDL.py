@@ -55,7 +55,8 @@ def draw_image_with_boxes(data, result_list,i):
             ax.add_patch(dot)
     #show final plot
     plt.axis("off")
-    plt.savefig("result{}".format(i))
+    plt.margins(0, 0)
+    plt.savefig("result{}".format(i),bbox_inches='tight')
     plt.show()
 
 #draw found faces subplot
@@ -68,9 +69,10 @@ def draw_faces(data, result_list,j):
         #define subplot
         plt.subplot(1, len(result_list), i+1)
         plt.axis("off")
+        plt.margins(0,0)
         #plot face
         plt.imshow(cv2.cvtColor(data[y1:y2,x1:x2], cv2.COLOR_BGR2RGB))
-    plt.savefig("faces{}.jpg".format(j))
+    plt.savefig("faces{}.jpg".format(j),bbox_inches='tight')
     plt.show()
     return
 
