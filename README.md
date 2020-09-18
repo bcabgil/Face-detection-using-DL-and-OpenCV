@@ -19,5 +19,6 @@ Content of the repository:
 * FaceNet, can also be trained to learn how to accurately predict a certain kind of image. However, when taking the pretrained model it has better accuracy than the CascadeClassifier.
 
 Now some examples will be showed:
-![OpenCV](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20OpenCV/image0.jpg)	![DL](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20Deep%20Learning/result0.png)
+
+OpenCV ![OpenCV](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20OpenCV/image0.jpg)	DL ![DL](https://github.com/bcabgil/Face-detection-using-DL-and-OpenCV/blob/master/Face%20Detection%20using%20Deep%20Learning/result0.png)
 
